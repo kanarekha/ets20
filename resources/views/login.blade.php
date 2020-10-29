@@ -43,7 +43,7 @@
                       {{ session('status') }}
                   </div>
               @endif
-                  <form class="user" action="/login/dashboard">
+                  <form class="user" action="/login/checkUser">
                   
                     <div class="form-group">
                       <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email" value="{{ old('email') }}">

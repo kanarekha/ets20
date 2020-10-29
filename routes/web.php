@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('login');
 });
 
 Route::get('/register', 'RegistrasiController@index');
@@ -22,3 +22,5 @@ Route::post('/register/create', 'RegistrasiController@create');
 
 Route::get('/login', 'LoginController@index');
 Route::get('/login/checkUser', 'LoginController@checkUser');
+
+Route::get('/dashboard', 'PagesController@index');
