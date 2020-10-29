@@ -21,28 +21,28 @@ class LoginController extends Controller
         return view('dashboard');
     }
 
-    // public function checkUser(Request $request)
-    // {
-    //     $request->validate([
-    //         'email' => 'required|email',
-    //         'password' => 'required|min:6',
+    public function checkUser(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6',
             
-    //     ]);
+        ]);
         
-    //     $value = $request->only('email', 'password');
+        $value = $request->only('email', 'password');
         
-    //     if (Auth::attempt( $value )) {
+        if (Auth::attempt( $value )) {
             
-    //         return redirect()->intended('/dashboard');
+            return redirect()->intended('/dashboard');
             
-    //     }
-    //     else {
+        }
+        else {
 
-    //         return Redirect()->back()->withInput()->withErrors([
-    //             'password' => 'Incorrect password!'
-    //         ]);
-    //     }
-    // }
+            return Redirect()->back()->withInput()->withErrors([
+                'password' => 'Incorrect password!'
+            ]);
+        }
+    }
 
     /**
      * Show the form for creating a new resource.

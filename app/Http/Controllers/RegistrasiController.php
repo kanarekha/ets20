@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+use App\User;
 
 class RegistrasiController extends Controller
 {
@@ -21,9 +27,30 @@ class RegistrasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3|max:50',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|confirmed|min:6',
+            'phone' => 'required|min:11',
+
+        ]);
+
+        $passwordHash = Hash::make($request->password);
+
+        $users = new User;
+        
+        $users->user_id = Str::uuid();
+        $users->name = $request->name;
+        $users->email = $request->email;
+        $users->password = $passwordHash;
+        $users->phone = $request->phone;
+        
+
+        $users->save();
+        return redirect('/login')->with('status', 'Data berhasil ditambahkan!');
+        
     }
 
     /**
