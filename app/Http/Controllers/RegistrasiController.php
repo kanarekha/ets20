@@ -31,7 +31,7 @@ class RegistrasiController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|max:50',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email|unique:user,email',
             'password' => 'required|confirmed|min:6',
             'phone' => 'required|min:11',
 
@@ -41,11 +41,11 @@ class RegistrasiController extends Controller
 
         $users = new User;
         
-        $users->user_id = Str::uuid();
-        $users->name = $request->name;
+        // $users->user_id = Str::uuid();
+        $users->name_user = $request->name;
         $users->email = $request->email;
         $users->password = $passwordHash;
-        $users->phone = $request->phone;
+        $users->phone_number = $request->phone;
         
 
         $users->save();

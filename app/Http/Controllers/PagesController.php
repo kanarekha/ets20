@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Role;
 
 class PagesController extends Controller
 {
@@ -46,7 +48,6 @@ class PagesController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
