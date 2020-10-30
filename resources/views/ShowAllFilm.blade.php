@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     @if (!empty($list_film))
                         <table class="table">
-                            <thead>
+                            <thead class="thead-dark">
                                 <tr>
                                     <th>No</th>
                                     <th>Title</th>
@@ -53,7 +53,7 @@
                         </table>
                     @endif
                     <hr>
-                    <div class="table-nav">
+                    <div class="table-nav ">
                         <div class="jumlah-data">
                             <strong> Total of Film : {{$jumlah_film}}</strong>
                         </div>

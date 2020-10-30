@@ -14,7 +14,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
-                <th scope="col">aksi</th>
+                <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,8 +25,8 @@
                 <td>{{ $u->email }}</td>
                 <td>{{ $u->phone_number }}</td>
                 <td>
-                    <a href="" class="badge badge-success">edit</a>
-                    <a href="" class="badge badge-danger">delete</a>
+                    <a href="" class="badge badge-success">Edit</a>
+                    <a href="" class="badge badge-danger">Delete</a>
                 </td>
                 </tr>
                 @endforeach
