@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Role;
+use App\Film;
 
-class PagesController extends Controller
+class FilmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $list_film = Film::all();
+        return view('ShowAllFilm', compact('list_film'));
     }
 
     /**
@@ -47,6 +47,7 @@ class PagesController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
