@@ -1,8 +1,11 @@
+
 @extends('dashboard')
 
 @section('content')
+<link rel="stylesheet" href="../../public/assets/css/style.css">
 <br>
-    <h2 style="text-align: center">LIST OF FILMS</h2>
+    <h2 style="text-align: center">LIST OF MOVIES</h2>
+    <?php $no = 1 ?>
         <br> <br>
         <div class="container">
             <div class="row">
@@ -22,7 +25,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $no = 1 ?>
+                                
                                 @foreach ($list_film as $film)
                                     <tr>
                                         <td> {{$no}}</td>
@@ -38,15 +41,26 @@
                                         <td> {{$film->country}}</td>
                                         <td> {{$film->rating}}</td>
                                         <td> {{$film->type}}</td>
-                                        <td> <a href="#" class="btn btn-success btn-sm" role="button">Detail</a>
+                                        <td> <a href="{{ url('detail/' . $film->film_id) }}" class="btn btn-success btn-sm" role="button">Detail</a>
                                              <a href="#" class="btn btn-success btn-sm" role="button">Review</a>
                                         </td>
+            
+                                        
                                     </tr>
                                     <?php $no++; ?>
                                 @endforeach
                             </tbody>
                         </table>
                     @endif
+                    <hr>
+                    <div class="table-nav">
+                        <div class="jumlah-data">
+                            <strong> Total of Film : {{$jumlah_film}}</strong>
+                        </div>
+                        <div class="paging" style="align-content: center">
+                            {{$list_film->links()}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

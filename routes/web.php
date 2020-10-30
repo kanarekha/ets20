@@ -26,3 +26,5 @@ Route::get('/login/checkUser', 'LoginController@checkUser');
 Route::get('/dashboard', 'PagesController@index');
 
 Route::get('/film', 'FilmController@index');
+
+Route::get('/detail/{film}', 'FilmController@show');

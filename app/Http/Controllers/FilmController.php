@@ -14,8 +14,9 @@ class FilmController extends Controller
      */
     public function index()
     {
-        $list_film = Film::all();
-        return view('ShowAllFilm', compact('list_film'));
+        $list_film = Film::orderBy('film_id', 'asc')->paginate(10);
+        $jumlah_film = Film::count();
+        return view('ShowAllFilm', compact('list_film', 'jumlah_film'));
     }
 
     /**
@@ -47,7 +48,8 @@ class FilmController extends Controller
      */
     public function show($id)
     {
-        //
+        $hasil_film = Film::findOrFail($id);
+        return view('FilmShow', compact('hasil_film'));
     }
 
     /**
