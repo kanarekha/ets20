@@ -33,7 +33,7 @@ Route::delete('/{user}','UserController@destroy');
 
 Route::get('/movies', 'FilmController@index');
 
-Route::get('movies/cari', 'FilmController@search');
+Route::get('/movies/cari', 'FilmController@search');
 
 Route::get('/detail/{movies}', 'FilmController@show');
 
