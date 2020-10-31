@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Film;
 use App\User;
 use App\UserActivity;
+use Session;
 
 class FilmController extends Controller
 {
@@ -52,6 +53,8 @@ class FilmController extends Controller
         $film->type = $request->type;
 
         $film->save();
+
+        Session::flash('flash_message', 'Data of movies saved');
         return redirect('/movies');
     }
 

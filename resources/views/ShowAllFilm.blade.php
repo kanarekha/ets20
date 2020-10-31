@@ -8,6 +8,8 @@
     <br>
     @include('form_pencarian')
     <br>
+    @include('flash.flash_message')
+    <br>
     
         <br> <br>
         <div class="container">
