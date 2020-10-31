@@ -18,7 +18,7 @@
                     </div>
                     <div class=" form-group">
                         <label for="synopsis" class="control-label">Synopsis</label>
-                        <textarea name="synopsis" maxlength="200" placeholder="Brief Synopsis" class="form-control"></textarea>
+                        <textarea name="synopsis" maxlength="1000" placeholder="Brief Synopsis" class="form-control"></textarea>
                     </div>
                     <div class=" form-group">
                         <label for="country" class="control-label">Country</label>
