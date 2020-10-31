@@ -110,7 +110,7 @@ class FilmController extends Controller
         $activity->review_film = $request->review_film;
 
         $activity->save();
-        return redirect('/movies');
+        return redirect('/movies')->with('status', 'Data review berhasil ditambahkan!');
     }
     public function edit($id)
     {

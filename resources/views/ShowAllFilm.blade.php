@@ -1,15 +1,22 @@
 
 @extends('dashboard')
+@section('title', 'movies')
 
 @section('content')
 <link rel="stylesheet" href="../../public/assets/css/style.css">
 <br>
     <h2 style="text-align: center">LIST OF MOVIES</h2>
+    
     <br>
     @include('form_pencarian')
     <br>
     @include('flash.flash_message')
     <br>
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
     
         <br> <br>
         <div class="container">

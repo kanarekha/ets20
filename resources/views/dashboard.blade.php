@@ -10,7 +10,8 @@
     <script src="../../public/assets/js/flash.js"></script>
     
 
-    <title>dashboard</title>
+    
+    <title>@yield('title')</title>
   </head>
   <body>
     

@@ -18,7 +18,7 @@
                         @endif
                         <br>
                     <div class="card-body">
-                        {{-- <center> --}}
+                        <!-- {{-- <center> --}} -->
                       <h5 class="card-title">Rating : {{$hasil_film->rating}}</h5>
                         
                       <h5 class="card-title">Year : {{$hasil_film->year}}</h5> 
@@ -28,7 +28,7 @@
                       <h5 class="card-title">Duration : {{$hasil_film->duration}}</h5>  
                       <h5 class="card-title">Type : {{$hasil_film->type}}</h5>
                       <h5 class="card-title">Synopsis :</h5> 
-                    {{-- </center>                    --}}
+                    <!-- {{-- </center>                    --}} -->
                       <p class="card-text">{{$hasil_film->synopsis}}</p>
                     
                     </div>

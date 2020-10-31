@@ -1,8 +1,9 @@
 @extends('dashboard')
 
-@section('title', 'profile')
+@section('title', 'profile user')
 
 @section('content')
+<title>list user</title>
 <div class="container">
   <div class="row">
       <div class="col-10">

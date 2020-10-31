@@ -33,11 +33,11 @@
                         <input type="text" name="actors" class="form-control" placeholder="The Actors of Movies">
                     </div>
                     <div class=" form-group">
-                        <label for="rating" class="control-label">Rating</label>
+                        <label for="rating" class="control-label">Rating ( 1-10 )</label>
                         <input type="text" name="rating" class="form-control" placeholder="The Rating of Movies">
                     </div>
                     <div class=" form-group">
-                        <label for="Duration" class="control-label">Duration</label>
+                        <label for="Duration" class="control-label">Duration (minutes)</label>
                         <input type="text" name="duration" class="form-control" placeholder="The Duration of Movies">
                     </div>
                     <div class=" form-group">
