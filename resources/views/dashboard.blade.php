@@ -23,20 +23,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link mr-2" href="{{'/film'}}">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
         <a class="nav-link mr-2" href="{{'/movies'}}">Movies <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle mr-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Genre
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Romance</a>
-          <a class="dropdown-item" href="#">Anime</a>
-        </div>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{{'/users'}}">Profile User <span class="sr-only">(current)</span></a>
