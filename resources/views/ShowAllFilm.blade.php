@@ -54,6 +54,8 @@
                                 @endforeach
                             </tbody>
                         </table>
+                    @else
+                        <p>No data of film</p>
                     @endif
                     <hr>
                     <div class="table-nav ">
@@ -64,6 +66,9 @@
                             {{$list_film->links()}}
                         </div>
                     </div>
+                    <p align="right">
+                        <a href="movies/create" class="btn btn-primary">Add Movies</a>
+                    </p>
                 </div>
             </div>
         </div>

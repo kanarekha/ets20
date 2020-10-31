@@ -29,7 +29,7 @@ class FilmController extends Controller
      */
     public function create()
     {
-        //
+        return view('FilmCreate');
     }
 
     /**
@@ -40,7 +40,19 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $film = new Film;
+        $film->title = $request->title;
+        $film->year = $request->year;
+        $film->synopsis = $request->synopsis;
+        $film->country = $request->country;
+        $film->directors = $request->directors;
+        $film->actors = $request->actors;
+        $film->rating = $request->rating;
+        $film->duration = $request->duration;
+        $film->type = $request->type;
+
+        $film->save();
+        return redirect('/movies');
     }
 
     public function search(Request $request) {

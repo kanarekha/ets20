@@ -32,6 +32,9 @@ Route::delete('/{user}','UserController@destroy');
 
 
 Route::get('/movies', 'FilmController@index');
+Route::get('/movies/create', 'FilmController@create');
+
+Route::post('/movies/save', 'FilmController@store');
 
 Route::get('/movies/cari', 'FilmController@search');
 
