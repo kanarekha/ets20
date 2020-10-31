@@ -59,7 +59,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -71,7 +71,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        User::where('user_id', $user->user_id)
+            ->update([
+                'name_user' => $request->name_user,
+                'email' => $request->email,
+                'phone_number' => $request->phone_number
+            ]);
+        // dd($request->all());
+        return redirect('/users')->with('status', 'Data User Berhasil diubah!');
+        
     }
 
     /**
@@ -82,6 +90,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::destroy($user->user_id);
+        return redirect('/users')->with('status', 'Data User Berhasil dihapus!');
+        return $user;
     }
 }
