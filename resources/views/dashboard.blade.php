@@ -24,7 +24,7 @@
         <a class="nav-link mr-2" href="#home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link mr-2" href="{{'/film'}}">Movies <span class="sr-only">(current)</span></a>
+        <a class="nav-link mr-2" href="{{'/movies'}}">Movies <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle mr-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,10 +40,11 @@
         <a class="nav-link" href="{{'/users'}}">Profile User <span class="sr-only">(current)</span></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    {{-- @yield('search') --}}
+    {{-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> --}}
   </div>
 </nav>
 

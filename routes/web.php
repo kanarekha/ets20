@@ -27,8 +27,11 @@ Route::get('/dashboard', 'PagesController@index');
 
 Route::get('/users', 'UserController@index');
 
-Route::get('/film', 'FilmController@index');
 
-Route::get('/detail/{film}', 'FilmController@show');
+Route::get('/movies', 'FilmController@index');
 
-Route::get('/review/{film}', 'FilmController@review');
+Route::get('movies/cari', 'FilmController@search');
+
+Route::get('/detail/{movies}', 'FilmController@show');
+
+Route::get('/review/{movies}', 'FilmController@review');

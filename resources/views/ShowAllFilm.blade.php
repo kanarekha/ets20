@@ -5,6 +5,9 @@
 <link rel="stylesheet" href="../../public/assets/css/style.css">
 <br>
     <h2 style="text-align: center">LIST OF MOVIES</h2>
+    <br>
+    @include('form_pencarian')
+    <br>
     <?php $no = 1 ?>
         <br> <br>
         <div class="container">
