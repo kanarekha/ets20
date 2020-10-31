@@ -30,3 +30,5 @@ Route::get('/users', 'UserController@index');
 Route::get('/film', 'FilmController@index');
 
 Route::get('/detail/{film}', 'FilmController@show');
+
+Route::get('/review/{film}', 'FilmController@review');

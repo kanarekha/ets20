@@ -42,7 +42,7 @@
                                         <td> {{$film->rating}}</td>
                                         <td> {{$film->type}}</td>
                                         <td> <a href="{{ url('detail/' . $film->film_id) }}" class="btn btn-success btn-sm" role="button">Detail</a>
-                                             <a href="#" class="btn btn-success btn-sm" role="button">Review</a>
+                                             <a href="{{ url('review/' . $film->film_id) }}" class="btn btn-success btn-sm" role="button">Review</a>
                                         </td>
             
                                         

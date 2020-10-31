@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Film;
+use App\User;
+use App\UserActivity;
 
 class FilmController extends Controller
 {
@@ -58,6 +61,19 @@ class FilmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function review($id) 
+    {
+        $review = DB::table('film')
+                 ->join('user_activity', 'film.film_id', '=', 'user_activity.film_id')
+                 ->join('user', 'user.user_id', '=', 'user_activity.user_id')
+                 ->where('user_activity.film_id','=',$id)
+                 ->get();
+        $title_film = Film::findOrFail($id);
+        // $userget = DB::table('user')
+        //            ->join('user_activity', 'user.user_id', '=', 'user_activity.user_id')
+        //            ->where('film.film_id', '=', $id);
+        return view('Review', compact('review', 'title_film'));
+    }
     public function edit($id)
     {
         //
