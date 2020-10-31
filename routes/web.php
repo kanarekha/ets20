@@ -26,6 +26,9 @@ Route::get('/login/checkUser', 'LoginController@checkUser');
 Route::get('/dashboard', 'PagesController@index');
 
 Route::get('/users', 'UserController@index');
+Route::get('/{user}/edit','UserController@edit');
+Route::patch('/{user}','UserController@update');
+Route::delete('/{user}','UserController@destroy');
 
 
 Route::get('/movies', 'FilmController@index');
