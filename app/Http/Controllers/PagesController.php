@@ -16,8 +16,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $user = Auth::user(); 
-        return view('ShowAllFilm)';
+        return view('ShowAllFilm');
     }
     
 
