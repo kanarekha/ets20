@@ -8,7 +8,7 @@
     <br>
     @include('form_pencarian')
     <br>
-    <?php $no = 1 ?>
+    
         <br> <br>
         <div class="container">
             <div class="row">
@@ -28,7 +28,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <?php $no = 1 ?>
                                 @foreach ($list_film as $film)
                                     <tr>
                                         <td> {{$no}}</td>
