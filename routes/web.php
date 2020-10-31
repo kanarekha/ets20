@@ -24,7 +24,7 @@ Route::get('/login', 'LoginController@index');
 Route::get('/login/checkUser', 'LoginController@checkUser');
 
 Route::get('/dashboard', 'PagesController@index');
-
+//User
 Route::get('/users', 'UserController@index');
 Route::get('/{user}/edit','UserController@edit');
 Route::patch('/{user}','UserController@update');
@@ -35,3 +35,5 @@ Route::get('/film', 'FilmController@index');
 Route::get('/detail/{film}', 'FilmController@show');
 
 Route::get('/review/{film}', 'FilmController@review');
+
+
