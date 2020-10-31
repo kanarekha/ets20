@@ -24,7 +24,7 @@ Route::get('/login', 'LoginController@index');
 Route::get('/login/checkUser', 'LoginController@checkUser');
 
 Route::get('/dashboard', 'PagesController@index');
-
+//User
 Route::get('/users', 'UserController@index');
 Route::get('/{user}/edit','UserController@edit');
 Route::patch('/{user}','UserController@update');
