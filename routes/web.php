@@ -41,3 +41,5 @@ Route::get('/movies/cari', 'FilmController@search');
 Route::get('/detail/{movies}', 'FilmController@show');
 
 Route::get('/review/{movies}', 'FilmController@review');
+
+Route::post('/review/save', 'FilmController@savereview');

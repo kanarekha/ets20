@@ -8,6 +8,8 @@ use App\Film;
 use App\User;
 use App\UserActivity;
 use Session;
+use Illuminate\Support\Facades\Auth;
+
 
 class FilmController extends Controller
 {
@@ -93,10 +95,22 @@ class FilmController extends Controller
                  ->where('user_activity.film_id','=',$id)
                  ->get();
         $title_film = Film::findOrFail($id);
+        $user = Auth::user();
         // $userget = DB::table('user')
         //            ->join('user_activity', 'user.user_id', '=', 'user_activity.user_id')
         //            ->where('film.film_id', '=', $id);
-        return view('Review', compact('review', 'title_film'));
+        return view('Review', compact('review', 'title_film', 'user'));
+    }
+
+    public function savereview(Request $request) {
+        $activity = new UserActivity;
+        $activity->film_id = $request->film_id;
+        $activity->user_id = $request->user_id;
+        $activity->rating_film = $request->rating_film;
+        $activity->review_film = $request->review_film;
+
+        $activity->save();
+        return redirect('/movies');
     }
     public function edit($id)
     {
