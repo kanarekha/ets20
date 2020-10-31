@@ -33,7 +33,7 @@ class LoginController extends Controller
         
         if (Auth::attempt( $value )) {
             
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/movies');
             
         }
         else {
