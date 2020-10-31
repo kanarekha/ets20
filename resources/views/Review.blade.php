@@ -36,10 +36,14 @@
         <div class="col-md-12">
             <h5>ADD REVIEW OF {{$title_film->title}}</h2> <br>
                 <form action="" method="post">
-                    <div class="form-group">
-                        <label for="name">NAME USER</label>
-                        <input type="text" class="form-control" name="nama" placeholder="input your name user">
+                    <div class=" form-group">
+                        <label for="film_id">FILM ID</label>
+                        <input type="text" class="form-control" name="film_id" value="{{$title_film->film_id}}">
                     </div>
+                    {{-- <div class="form-group">
+                        <label for="user_id">USER ID</label>
+                        <input type="text" class="form-control" name="user_id" value="{{$review->user_id}}">
+                    </div> --}}
                     <div class="form-group">
                         <label for="rating_film">RATING FILM</label>
                         <input type="text" class="form-control" name="rating_film" placeholder="rating of film">

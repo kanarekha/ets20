@@ -43,6 +43,15 @@ class FilmController extends Controller
         //
     }
 
+    public function search(Request $request) {
+        $kata_kunci = $request->input('kata_kunci');
+        $query = Film::where('title', 'LIKE', '%' . $kata_kunci . '%');
+        $list_film = $query->paginate(2);
+        $pagination = $list_film->appends($request->except('page'));
+        $jumlah_film = $list_film->total();
+        return view('ShowAllFilm', compact('list_film', 'kata_kunci', 'pagination', 'jumlah_film'));
+    }
+
     /**
      * Display the specified resource.
      *

@@ -30,10 +30,11 @@ Route::get('/{user}/edit','UserController@edit');
 Route::patch('/{user}','UserController@update');
 Route::delete('/{user}','UserController@destroy');
 
-Route::get('/film', 'FilmController@index');
 
-Route::get('/detail/{film}', 'FilmController@show');
+Route::get('/movies', 'FilmController@index');
 
-Route::get('/review/{film}', 'FilmController@review');
+Route::get('/movies/cari', 'FilmController@search');
 
+Route::get('/detail/{movies}', 'FilmController@show');
 
+Route::get('/review/{movies}', 'FilmController@review');

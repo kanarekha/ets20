@@ -5,7 +5,10 @@
 <link rel="stylesheet" href="../../public/assets/css/style.css">
 <br>
     <h2 style="text-align: center">LIST OF MOVIES</h2>
-    <?php $no = 1 ?>
+    <br>
+    @include('form_pencarian')
+    <br>
+    
         <br> <br>
         <div class="container">
             <div class="row">
@@ -25,7 +28,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <?php $no = 1 ?>
                                 @foreach ($list_film as $film)
                                     <tr>
                                         <td> {{$no}}</td>
